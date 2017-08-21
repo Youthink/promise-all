@@ -1,9 +1,18 @@
 {
   "name": "promise-all-simple",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "promise.all",
   "main": "index.js",
   "repository": "https://github.com/Youthink/promise-all.git",
-  "author": "Youthink",
+  "keywords": [
+    "promise",
+    "all",
+    "promise.all",
+    "functional"
+  ],
+  "author": {
+    "name":"Youthink",
+    "email": "hufy3651@foxmail.com"
+  },
   "license": "MIT"
 }

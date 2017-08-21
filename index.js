@@ -1,4 +1,7 @@
 function judgePromiseAll() {
+  if (!isPromise( Promise.resolve(1))) {
+    return;
+  }
   if (Promise.all === undefined) {
     Promise.all = promiseAll;
   }
@@ -8,6 +11,10 @@ function judgePromiseAll() {
 function isArray(o){
     return Object.prototype.toString.call(o)=='[object Array]';
 }
+
+function isPromise(e){
+  return !!e&&typeof e.then=="function";
+};
 
 function promiseAll(promises) {
   return new Promise(function(resolve, reject) {
