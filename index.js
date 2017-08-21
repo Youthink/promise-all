@@ -5,6 +5,10 @@ function judgePromiseAll() {
   return;
 }
 
+function isArray(o){
+    return Object.prototype.toString.call(o)=='[object Array]';
+}
+
 function promiseAll(promises) {
   return new Promise(function(resolve, reject) {
     if (!isArray(promises)) {
