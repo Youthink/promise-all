@@ -1,6 +1,6 @@
 {
   "name": "promise-all-simple",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "promise.all",
   "main": "index.js",
   "repository": "https://github.com/Youthink/promise-all.git",

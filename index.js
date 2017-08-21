@@ -1,4 +1,4 @@
-function judgePromiseAll() {
+(function() {
   if (!isPromise( Promise.resolve(1))) {
     return;
   }
@@ -6,11 +6,7 @@ function judgePromiseAll() {
     Promise.all = promiseAll;
   }
   return;
-}
-
-function isArray(o){
-    return Object.prototype.toString.call(o)=='[object Array]';
-}
+})()
 
 function isPromise(e){
   return !!e&&typeof e.then=="function";
@@ -18,7 +14,7 @@ function isPromise(e){
 
 function promiseAll(promises) {
   return new Promise(function(resolve, reject) {
-    if (!isArray(promises)) {
+    if (!Array.isArray(promises)) {
       return reject(new TypeError('arguments must be an array'));
     }
     var resolvedCounter = 0;
@@ -40,5 +36,5 @@ function promiseAll(promises) {
   })
 }
 
-judgePromiseAll();
+exports.moudle = Promise.all;
 
